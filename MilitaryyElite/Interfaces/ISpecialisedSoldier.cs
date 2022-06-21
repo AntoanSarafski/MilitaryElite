@@ -1,6 +1,6 @@
 ﻿namespace MilitaryyElite.Interfaces
 {
-    public interface ISpecialisedSoldier
+    public interface ISpecialisedSoldier : IPrivate
     {
         public Corps Corps { get; set; }
     }

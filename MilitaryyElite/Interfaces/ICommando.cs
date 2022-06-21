@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace MilitaryyElite.Interfaces
 {
-    public interface ICommando
+    public interface ICommando : ISpecialisedSoldier
     {
+        public List<IMission> Missions { get; set; }
+
+        public void CompleteMission(string codeName);
     }
 }

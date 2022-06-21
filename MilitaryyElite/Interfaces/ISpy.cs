@@ -4,7 +4,8 @@ using System.Text;
 
 namespace MilitaryyElite.Interfaces
 {
-    interface ISpy
+    interface ISpy : ISoldier
     {
+        public int CodeNumber { get; set; }
     }
 }

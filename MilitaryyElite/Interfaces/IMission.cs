@@ -4,7 +4,11 @@ using System.Text;
 
 namespace MilitaryyElite.Interfaces
 {
-    interface IMission
+    public interface IMission
     {
+        public string CodeName { get; set; }
+
+        public State State { get; set; }
+
     }
 }

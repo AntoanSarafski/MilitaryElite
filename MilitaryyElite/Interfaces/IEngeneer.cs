@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿using System.Collections.Generic;
 namespace MilitaryyElite.Interfaces
 {
-    interface IEngeneer
+    public interface IEngeneer : ISpecialisedSoldier
     {
+        public List<IRepair> Repairs { get; set; }
     }
 }
