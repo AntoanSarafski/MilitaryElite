@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace MilitaryyElite.Implementations
 {
-    public class Engeneer : SpecialisedSoldier, IEngeneer
+    public class Engineer : SpecialisedSoldier, IEngineer
     {
-        public Engeneer(int id, string firstName, string lastName,
+        public Engineer(int id, string firstName, string lastName,
             decimal salary, Corps corps) 
             : base(id, firstName, lastName, salary, corps)
         {
