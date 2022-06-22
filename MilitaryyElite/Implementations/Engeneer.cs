@@ -1,5 +1,6 @@
 ﻿using MilitaryyElite.Interfaces;
 using System.Collections.Generic;
+using System.Text;
 
 namespace MilitaryyElite.Implementations
 {
@@ -13,5 +14,23 @@ namespace MilitaryyElite.Implementations
         }
 
         public List<IRepair> Repairs { get ; set ; }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            string baseInfo = base.ToString();
+
+            sb.AppendLine(baseInfo);
+            sb.AppendLine($"Corps: {Corps}");
+            sb.AppendLine("Repairs:");
+
+            foreach (var item in Repairs)
+            {
+                sb.AppendLine($"  {item}");
+            }
+
+            return sb.ToString().TrimEnd(); ;
+        }
     }
 }

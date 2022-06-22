@@ -1,6 +1,7 @@
 ﻿using MilitaryyElite.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace MilitaryyElite.Implementations
 {
@@ -21,6 +22,24 @@ namespace MilitaryyElite.Implementations
                 .FirstOrDefault(x => x.CodeName == codeName);
             // check if mission exists
             mission.State = State.Finished;
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            string baseInfo = base.ToString();
+
+            sb.AppendLine(baseInfo);
+            sb.AppendLine($"Corps: {Corps}");
+            sb.AppendLine("Missions:");
+
+            foreach (var item in Missions)
+            {
+                sb.AppendLine($"  {item}");
+            }
+
+            return sb.ToString().TrimEnd(); ;
         }
     }
 }

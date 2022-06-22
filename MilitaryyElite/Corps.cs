@@ -2,7 +2,7 @@
 {
     public enum Corps
     {
-        AirForces,
+        Airforces,
         Marines
     }
 }

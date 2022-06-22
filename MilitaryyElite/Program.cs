@@ -30,7 +30,7 @@ namespace MilitaryyElite
                         lastName, salary);
                     soldiers.Add(id, @private);
                 }
-                else if (soldierType == "LeutenantGeneral")
+                else if (soldierType == "LieutenantGeneral")
                 {
                     decimal salary = decimal.Parse(inputInfo[4]);
                     ILieutenantGeneral leutenantGeneral = new LieutenantGeneral
@@ -72,7 +72,7 @@ namespace MilitaryyElite
                     soldiers.Add(id, engineer);
 
                 }
-                else if (soldierType == "Comando")
+                else if (soldierType == "Commando")
                 {
                     decimal salary = decimal.Parse(inputInfo[4]);
                     string corpAsString = inputInfo[5];
@@ -122,6 +122,11 @@ namespace MilitaryyElite
 
 
                 input = Console.ReadLine();
+            }
+
+            foreach (var item in soldiers)
+            {
+                Console.WriteLine(item.Value.ToString());
             }
         }
     }

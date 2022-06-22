@@ -14,6 +14,11 @@ namespace MilitaryyElite.Implementations
         }
         public string PartName { get; set ; }
 
-        public int HoursWorked { get; set; } 
+        public int HoursWorked { get; set; }
+
+        public override string ToString()
+        {
+            return $"Part Name: {PartName} Hours Worked: {HoursWorked}";
+        }
     }
 }
